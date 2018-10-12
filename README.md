@@ -1,3 +1,11 @@
+Fork Notice:
+============
+
+- This is a fork from https://github.com/adrianhurt/play-bootstrap
+- All credits go to Adrian Hurtado.
+- The pure intent of this fork is to have a release of P26-B4 on Maven.
+
+
 Play-Bootstrap
 =================================
 

@@ -1,6 +1,6 @@
 name := """play-bootstrap"""
 
-version := "1.4-P26-B4-SNAPSHOT"
+version := "1.4-P26-B4-0"
 
 scalaVersion := "2.12.4"
 
@@ -13,7 +13,7 @@ resolvers ++= Seq(
 
 libraryDependencies ++= Seq(
   filters % "provided",
-  "com.adrianhurt" %% "play-bootstrap-core" % "1.4-P26-SNAPSHOT",
+  "net.reactivecore" %% "play-bootstrap-core" % "1.4-P26-0",
   specs2 % Test
 )
 
@@ -31,40 +31,31 @@ sonatypeSettings
 
 publishMavenStyle := true
 
-organization := "com.adrianhurt"
+organization := "net.reactivecore"
 
 description := "This is a collection of input helpers and field constructors for Play Framework to render Bootstrap HTML code."
-
-homepage := Some(url("https://adrianhurt.github.io/play-bootstrap"))
-
-licenses := Seq("Apache License" -> url("https://github.com/adrianhurt/play-bootstrap/blob/master/LICENSE"))
-
-startYear := Some(2014)
-
-publishTo := {
-  val nexus = "https://oss.sonatype.org/"
-  if (isSnapshot.value)
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
-}
 
 publishArtifact in Test := false
 
 pomIncludeRepository := { _ => false }
 
 pomExtra := (
-  <scm>
-    <url>git@github.com:adrianhurt/play-bootstrap.git</url>
-    <connection>scm:git:git@github.com:adrianhurt/play-bootstrap.git</connection>
-  </scm>
-  <developers>
-    <developer>
-      <id>adrianhurt</id>
-      <name>Adrian Hurtado</name>
-      <url>https://github.com/adrianhurt</url>
-    </developer>
-  </developers>
+  <url>https://github.com/reactivecore/play-bootstrap</url>
+    <licenses>
+      <license>
+        <name>Apache License, Version 2.0</name>
+        <url>https://www.apache.org/licenses/LICENSE-2.0.html</url>
+      </license>
+    </licenses>
+    <scm>
+      <connection>scm:git:@github.com:reactivecore/play-bootstrap.git</connection>
+      <url>git@github.com:reactivecore/play-bootstrap.git</url>
+    </scm>
+    <developers>
+      <developer>
+        <id>nob13</id>
+        <name>Norbert Schultz</name>
+        <url>https://www.reactivecore.de</url>
+      </developer>
+    </developers>
 )
-
-credentials += Credentials(Path.userHome / ".sbt" / "sonatype.credentials")
