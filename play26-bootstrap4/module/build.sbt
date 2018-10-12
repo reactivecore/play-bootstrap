@@ -27,10 +27,6 @@ scalariformSettings
 // Maven settings
 //*******************************
 
-sonatypeSettings
-
-publishMavenStyle := true
-
 organization := "net.reactivecore"
 
 description := "This is a collection of input helpers and field constructors for Play Framework to render Bootstrap HTML code."
